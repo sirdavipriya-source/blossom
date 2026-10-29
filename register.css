@@ -1,0 +1,106 @@
+/* ===== General Page Styling ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: url("./img/l4.jpeg") 
+              no-repeat center center/cover;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Form Box ===== */
+.box1 {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Heading ===== */
+.container1 h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* ===== Input Groups ===== */
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #eee;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus {
+  border: 2px solid #6a11cb;
+  box-shadow: 0 0 8px #6a11cb;
+}
+
+/* ===== Button ===== */
+.btn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+/* Remove underline from button link */
+.btn a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+/* ===== Register link ===== */
+.register {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #eee;
+}
+
+.register a {
+  color: #ffda79;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}

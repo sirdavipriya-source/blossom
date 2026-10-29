@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blossom Gifts — Gifts & Hampers</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="logo">BG</div>
+        <div>
+          <div class="h6 mb-0 fw-bold text-pink">Blossom Gifts</div>
+          <small class="text-muted">Handmade • Curated • Gift-wrapped</small>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-pink" id="openShopBtn">Start Shopping</button>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- HERO -->
+<header id="home" class="hero d-flex align-items-center">
+  <div class="container position-relative">
+    <!-- Decorative blob -->
+    <div class="hero-blob"></div>
+
+    <div class="row align-items-center">
+      <!-- Text -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <span class="badge bg-light text-pink shadow-sm mb-3">
+          ✨ New arrivals • Free gift wrap
+        </span>
+        <h1 class="display-4 fw-bold hero-title">
+          Gifts that say “I remembered”
+        </h1>
+        <p class="lead text-muted">
+          Hand-picked boxes, seasonal bouquets, personalised goodies and fast
+          delivery. Delight someone today — we’ll wrap it like a memory.
+        </p>
+        <div class="d-flex gap-3 mt-3">
+          <a class="btn btn-pink btn-lg px-4 shadow" href="#shop">Shop Bestsellers</a>
+          <button class="btn btn-outline-dark btn-lg px-4" id="playHero">
+            <i class="fa fa-play me-2"></i> Watch
+          </button>
+        </div>
+      </div>
+
+<!-- Product preview -->
+<div class="col-lg-6">
+  <div class="card preview-card shadow-lg border-0">
+    <div class="row g-2">
+      <div class="col-6">
+        <img src="./img/bli.jpeg" class="product-img rounded" alt="Bliss Box">
+        <div class="mt-2"><strong>Bliss Box</strong><div class="text-muted">₹1,299</div></div>
+      </div>
+      <div class="col-6">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+             class="product-img rounded" alt="Green Cheer">
+        <div class="mt-2"><strong>Green Cheer</strong><div class="text-muted">₹799</div></div>
+      </div>
+      <div class="col-6">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop"
+             class="product-img rounded" alt="Sweet Heart">
+        <div class="mt-2"><strong>Sweet Heart</strong><div class="text-muted">₹599</div></div>
+      </div>
+      <div class="col-6">
+        <img src="./img/cozy.jpeg" class="product-img rounded" alt="Cozy Notes">
+        <div class="mt-2"><strong>Cozy Notes</strong><div class="text-muted">₹449</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- SHOP / FILTERS -->
+  <section id="shop" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h3 class="mb-0">Popular Gifts</h3>
+        <div class="filters btn-group" role="group" aria-label="Filters">
+          <button class="btn btn-outline-secondary active" data-cat="all">All</button>
+          <button class="btn btn-outline-secondary" data-cat="box">Gift Boxes</button>
+          <button class="btn btn-outline-secondary" data-cat="plants">Plants</button>
+          <button class="btn btn-outline-secondary" data-cat="choco">Sweets</button>
+          <button class="btn btn-outline-secondary" data-cat="cards">Cards</button>
+        </div>
+      </div>
+
+      <div id="productsGrid" class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section id="offers" class="py-4 bg-light">
+    <div class="container">
+      <h4>Today's Offers</h4>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="p-3 rounded-3" style="background:linear-gradient(90deg,#ffd1ff,#cde7ff);">
+            <h5>Buy 2 Get 10% Off</h5>
+            <p class="mb-0">Mix & match gift boxes. Use code: <strong>BLOSSOM10</strong></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 rounded-3" style="background:linear-gradient(90deg,#d6ffd9,#d9f0ff);">
+            <h5>Free Same-day Wrapping</h5>
+            <p class="mb-0">On orders placed before 4 PM in select cities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART BUTTON (Bootstrap Offcanvas) -->
+  <button class="btn cart-btn btn-pink shadow-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas" aria-controls="cartCanvas">
+    <i class="fa fa-shopping-bag me-2"></i>
+    Cart <span class="badge bg-white text-dark ms-2" id="cartCount">0</span>
+  </button>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItems" class="mb-3 overflow-auto"></div>
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <strong>Total</strong>
+          <strong id="cartTotal">₹0</strong>
+        </div>
+        <button class="btn btn-pink w-100" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT QUICK VIEW MODAL -->
+  <div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-4">
+          <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <img src="" id="modalImg" class="img-fluid rounded" alt="Product">
+            </div>
+            <div class="col-md-6">
+              <h4 id="modalTitle"></h4>
+              <p id="modalDesc" class="text-muted"></p>
+              <div class="mb-3"><strong id="modalPrice" class="text-pink fs-4"></strong></div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-pink" id="modalAdd">Add to cart</button>
+                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5>Blossom Gifts</h5>
+          <p class="text-muted">We create thoughtful gifts for every moment — curated boxes, custom notes, and fast delivery.</p>
+          <p class="mb-0"><strong>Email:</strong> hello@blossom.example<br><strong>Phone:</strong> +91 98765 43210</p>
+        </div>
+        <div class="col-md-6">
+          <h6>Send us a message</h6>
+          <form id="contactForm" class="mt-2">
+            <div class="mb-2">
+              <input type="text" class="form-control" id="cname" placeholder="Your name" required>
+            </div>
+            <div class="mb-2">
+              <input type="email" class="form-control" id="cemail" placeholder="Email" required>
+            </div>
+            <div class="mb-2">
+              <textarea class="form-control" id="cmsg" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-outline-secondary me-2" type="reset">Reset</button>
+              <button class="btn btn-pink" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 text-muted small">© <span id="year"></span> Blossom Gifts — All rights reserved</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
